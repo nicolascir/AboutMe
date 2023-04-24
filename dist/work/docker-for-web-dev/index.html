@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-37FXCHFA">
+	<head>
+		<meta charset="UTF-8">
+<meta name="description" property="og:description" content="Durant ma formation, j'ai reuni tous les outils dev web de l'année dans une seule et image Docker, à déployer pour commencer un projet en quelques secondes.
+">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Astro v2.1.9">
+<title>Docker for Web dev</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap" rel="stylesheet">
+
+<script>
+	// This code is inlined in the head to make dark mode instant & blocking.
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+
+	if (typeof localStorage !== 'undefined') {
+		// Watch the document element and persist user preference when it changes.
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('theme-dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+	<link rel="stylesheet" href="/_astro/404.934a6f45.css" />
+<link rel="stylesheet" href="/_astro/about.66bdfe32.css" />
+<link rel="stylesheet" href="/_astro/about.c79fe51e.css" />
+<link rel="stylesheet" href="/_astro/index.dab85124.css" />
+<link rel="stylesheet" href="/_astro/_...slug_.01ae509f.css" /><script type="module">addEventListener("load",()=>document.documentElement.classList.add("loaded"));class i extends HTMLElement{constructor(){super(),this.appendChild(this.querySelector("template").content.cloneNode(!0));const e=this.querySelector("button"),t=document.getElementById("menu-content");t.hidden=!0;const n=s=>{e.setAttribute("aria-expanded",s?"true":"false"),t.hidden=!s};e.addEventListener("click",()=>n(t.hidden));const d=s=>{n(s.matches),e.hidden=s.matches},c=window.matchMedia("(min-width: 50em)");d(c),c.addEventListener("change",d)}}customElements.define("menu-button",i);class r extends HTMLElement{constructor(){super();const e=this.querySelector("button"),t=n=>{document.documentElement.classList[n?"add":"remove"]("theme-dark"),e.setAttribute("aria-pressed",String(n))};e.addEventListener("click",()=>t(!this.isDark())),t(this.isDark())}isDark(){return document.documentElement.classList.contains("theme-dark")}}customElements.define("theme-toggle",r);
+</script></head>
+	<body class="astro-37FXCHFA">
+		<div class="stack backgrounds astro-37FXCHFA">
+			<nav class="astro-DMQPWCEC">
+	<div class="menu-header astro-DMQPWCEC">
+		<a href="/" class="site-title astro-DMQPWCEC">
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="url(#icon-gradient-2majozjmj)" fill="url(#icon-gradient-2majozjmj)" style="--size:1.6em" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m80 96 40 32-40 32m56 0h40"/><rect width="192" height="160" x="32" y="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.97" rx="8.5"/></g>
+	<linearGradient id="icon-gradient-2majozjmj" x1="23" x2="235" y1="43" y2="202" gradientUnits="userSpaceOnUse" class="astro-PATNJMLL">
+				<stop stop-color="var(--gradient-stop-1)" class="astro-PATNJMLL"></stop>
+				<stop offset=".5" stop-color="var(--gradient-stop-2)" class="astro-PATNJMLL"></stop>
+				<stop offset="1" stop-color="var(--gradient-stop-3)" class="astro-PATNJMLL"></stop>
+			</linearGradient>
+</svg>
+			Nicolas Cirion
+		</a>
+		<menu-button class="astro-DMQPWCEC">
+			<template class="astro-DMQPWCEC">
+				<button class="menu-button astro-DMQPWCEC" aria-expanded="false">
+					<span class="sr-only astro-DMQPWCEC">Menu</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M40 128h176M40 64h176M40 192h176"/></g>
+	
+</svg>
+				</button>
+			</template>
+		</menu-button>
+	</div>
+	<div id="menu-content" class="astro-DMQPWCEC">
+		<ul class="nav-items astro-DMQPWCEC">
+			<li class="astro-DMQPWCEC">
+						<a class="link astro-DMQPWCEC" href="/">
+							Home
+						</a>
+					</li><li class="astro-DMQPWCEC">
+						<a class="link active astro-DMQPWCEC" href="/work/">
+							Work
+						</a>
+					</li><li class="astro-DMQPWCEC">
+						<a class="link astro-DMQPWCEC" href="/about/">
+							About
+						</a>
+					</li>
+		</ul>
+		<div class="menu-footer astro-DMQPWCEC">
+			<div class="socials astro-DMQPWCEC">
+				<a href="https://github.com/nicolascir" class="social astro-DMQPWCEC">
+							<span class="sr-only astro-DMQPWCEC">GitHub</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><g stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-width="14.7" d="M55.7 167.2c13.9 1 21.3 13.1 22.2 14.6 4.2 7.2 10.4 9.6 18.3 7.1l1.1-3.4a60.3 60.3 0 0 1-25.8-11.9c-12-10.1-18-25.6-18-46.3"/><path fill="none" stroke-width="16" d="M61.4 205.1a24.5 24.5 0 0 1-3-6.1c-3.2-7.9-7.1-10.6-7.8-11.1l-1-.6c-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.7 46.7 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4 0 42.6-25.8 54.7-43.6 58.7 1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3"/><path fill="none" stroke-width="16" d="M160.9 185.7c1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3A98.6 98.6 0 1 0 61.4 205c-1.4-2.1-11.3-17.5-11.8-17.8-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.4 46.4 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4.1 42.6-25.8 54.7-43.6 58.6z"/><path fill="none" stroke-width="18.7" d="m170.1 203.3 17.3-12 17.2-18.7 9.5-26.6v-27.9l-9.5-27.5" /><path fill="none" stroke-width="22.7" d="m92.1 57.3 23.3-4.6 18.7-1.4 29.3 5.4m-110 32.6-8 16-4 21.4.6 20.3 3.4 13" /><path fill="none" stroke-width="13.3" d="M28.8 133a100 100 0 0 0 66.9 94.4v-8.7c-22.4 1.8-33-11.5-35.6-19.8-3.4-8.6-7.8-11.4-8.5-11.8"/></g></g>
+	
+</svg>
+						</a><a href="https://hub.docker.com/u/nicolascir" class="social astro-DMQPWCEC">
+							<span class="sr-only astro-DMQPWCEC">Docker</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M94.1 184.6c-11.4 33.9-56.6 33.9-56.6 33.9s0-45.2 33.9-56.6m124.5-56.5L128 173.3 82.7 128l67.9-67.9C176.3 34.4 202 34.7 213 36.3a7.8 7.8 0 0 1 6.7 6.7c1.6 11 1.9 36.7-23.8 62.4Z"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M184.6 116.7v64.6a8 8 0 0 1-2.4 5.6l-32.3 32.4a8 8 0 0 1-13.5-4.1l-8.4-41.9m11.3-101.9H74.7a8 8 0 0 0-5.6 2.4l-32.4 32.3a8 8 0 0 0 4.1 13.5l41.9 8.4"/></g>
+	
+</svg>
+						</a><a href="https://fr.linkedin.com/in/nicolas-cirion-bab9131bb" class="social astro-DMQPWCEC">
+							<span class="sr-only astro-DMQPWCEC">YouTube</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><rect width="184" height="184" x="36" y="36" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M120 112v64m-32-64v64m32-36a28 28 0 0 1 56 0v36"/><circle stroke="none" cx="88" cy="80" r="12"/></g>
+	
+</svg>
+						</a>
+			</div>
+
+			<div class="theme-toggle astro-DMQPWCEC">
+				<theme-toggle class="astro-X3PJSKD3">
+	<button class="astro-X3PJSKD3">
+		<span class="sr-only astro-X3PJSKD3">Dark theme</span>
+		<span class="icon light astro-X3PJSKD3"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><circle cx="128" cy="128" r="60" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 36V16M63 63 49 49m-13 79H16m47 65-14 14m79 13v20m65-47 14 14m13-79h20m-47-65 14-14"/></g>
+	
+</svg></span>
+		<span class="icon dark astro-X3PJSKD3"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M216 112V64m24 24h-48m-24-64v32m16-16h-32m65 113A92 92 0 0 1 103 39h0a92 92 0 1 0 114 114Z"/></g>
+	
+</svg></span>
+	</button>
+</theme-toggle>
+			</div>
+		</div>
+	</div>
+</nav>
+			<div class="stack gap-20 astro-QWEKCIQP">
+		<div class="stack gap-15 astro-QWEKCIQP">
+			<header class="astro-QWEKCIQP">
+				<div class="wrapper stack gap-2 astro-QWEKCIQP">
+					<a class="back-link astro-QWEKCIQP" href="/work/"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M216 128H40m72-72-72 72 72 72"/></g>
+	
+</svg> Work</a>
+					<header class="hero stack gap-4 start astro-BBE6DXRZ">
+	<div class="stack gap-2 astro-BBE6DXRZ">
+		<h1 class="title astro-BBE6DXRZ">Docker for Web dev</h1>
+		
+	</div>
+	<div class="details astro-QWEKCIQP">
+							<div class="tags astro-QWEKCIQP">
+								<div class="pill astro-2QEYWK4B">Docker</div><div class="pill astro-2QEYWK4B">Fast</div><div class="pill astro-2QEYWK4B">New Project</div>
+							</div>
+							<p class="description astro-QWEKCIQP">Durant ma formation, j&#39;ai reuni tous les outils dev web de l&#39;année dans une seule et image Docker, à déployer pour commencer un projet en quelques secondes.
+</p>
+						</div>
+</header>
+				</div>
+			</header>
+			<main class="wrapper astro-QWEKCIQP">
+				<div class="stack gap-10 content astro-QWEKCIQP">
+					<img src="/assets/docker.webp" alt="plantes" class="astro-QWEKCIQP">
+					<div class="content astro-QWEKCIQP">
+						<p>This image is a Linux with softwares for dev students</p>
+<p>Default “docker pull nicolascir/nicodevdocker” DOES NOT WORK without TAG (version name), please read docker run examples below</p>
+<p>2021-12-18 “v12” //ADDED angular example, UPDATED NPM 8.3.0</p>
+<p>2021-12-10 “v11” //ADDED Strapi example , Laravel example</p>
+<p>2021-12-09 “v10” //ADDED react example</p>
+<p>2021-12-08 “v9” //ADDED vue example ADDED @vue/cli@4.5.15 , @vue/cli-service-global@4.5.15</p>
+<p>2021-12-07 “v8” //UPDATED symfony example, ADDED codeigniter 4 example, ADDED unzip (6.0-25ubuntu1) , zip (3.0-11build1), php intl(2:7.4+75)</p>
+<p>2021-11-23 “v7” //ADDED example folder, ADDED wget 1.20.3-1 / git 1:2.25.1-1</p>
+<p>2021-11-11 “v6” //ADDED “project” folder for persistent linux/wsl folder</p>
+<p>2021-11-10 “v5” //ADDED nano 4.8/curl 7.68.0-1ubuntu2.7/ Composer version 2.1.12 //UPDATED npm 8.1.3/ node v14.18.1/ Yarn1.22.15</p>
+<p>2021-11-09 “v4” //ADDED Apache2-2.4.41/ Npm 6.14/Node 10.19/ Yarn 0.32/Mariadb 10.3.31/ Phpmyadmin 4.9.5/ mongodb 3.6.8</p>
+<p>2021-11-08 “V1 V2 V3” // started from UBUNUTU 20.04.3 LTS official docker image</p>
+<p>FIRST RUN</p>
+<p>docker run -it -p 80:80 —name mydevcontainer nicolascir/nicodevdocker:v12</p>
+<p>WHEN CONTAINER IS CLOSED, OPEN IT AGAIN USING :</p>
+<p>docker start mydevcontainer</p>
+<p>docker exec -it mydevcontainer bash</p>
+<p>YOU CAN ADD NEEDED PORTS (example)</p>
+<p>docker run -it -p 3000:3000 -p 80:80 -p 3306:3306 -p 1337:1337 -p 27017:27017 —name mydevcontainer nicolascir/nicodevdocker:v12</p>
+<p>SHARED FOLDER FROM INSIDE DOCKER TO YOUR LINUX / WINDOWS -> CREATE A “-v” VOLUME (linux: where your wrote the command line, windows: in explorer type \ \ wsl$ )</p>
+<p>docker run -it -p 3000:3000 -p 80:80 -v ${PWD}/project:/project —name mydevcontainer nicolascir/nicodevdocker:v12</p>
+<p>NOT RECOMMENDED AT ALL, TO EDIT FILES YOU CAN USE Visual Studio Code “remote explorer” ADDON (microsoft 6M downloads)</p>
+<p>CONTENT :</p>
+<p>UBUNUTU 20.04.3 LTS / NODE : 14.18.1 / NPM : 8.3.0 / YARN : 1.22.15 / NANO : 4.8 / CURL : 7.68.0-1ubuntu2.7 / COMPOSER : 2.1.12 / wget 1.20.3-1 / git 1:2.25.1-1 /unzip(6.0-25ubuntu1) / zip (3.0-11build1) / php intl(2:7.4+75) / @vue/cli@4.5.15 / @vue/cli-service-global@4.5.15</p>
+<p>APACHE2 2.4.41 , port 80 , PHP : 7.4.3 , START MANUALLY : sudo service apache2 start</p>
+<p>MARIADB : 10.3.31 , port 3306 , START MANUALLY sudo service mysql start , root // no password , admin//adminadmin and coincoin//coincoin are users with all access granted</p>
+<p>PHPMYADMIN : 4.9.5deb2 , WORKS IF APACHE2 AND MYSQL STARTED : <a href="http://127.0.0.1/phpmyadmin">http://127.0.0.1/phpmyadmin</a> , login : admin//adminadmin</p>
+<p>MONGODB : 3.6.8 , port 27017 , START MANUALLY : sudo service mongodb start</p>
+<p>HOW TO USE PRE-INSTALLED SYMFONY PROJECT</p>
+<p>docker run -it -p 8000:8000 -p 80:80 —name symfonyexample nicolascir/nicodevdocker:v12</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>cd examples/symfonyexample</p>
+<p>symfony serve -d</p>
+<p>HOW TO CREATE NEW SYMFONY PROJECT</p>
+<p>docker run -it -p 8000:8000 -p 80:80 —name symfonycontainer nicolascir/nicodevdocker:v12</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>cd project</p>
+<p>composer create-project symfony/website-skeleton my_project_name</p>
+<p>cd my_project_name</p>
+<p>symfony serve -d</p>
+<p>modify .env and add</p>
+<p>DATABASE_URL=“mysql://admin:adminadmin@127.0.0.1:3306/my_project_name?serverVersion=mariadb-10.3.31”</p>
+<p>HOW TO USE PRE-INSTALLED Codeigniter4</p>
+<p>docker run -it -p 80:80 —name ci4examplecontainer nicolascir/nicodevdocker:v12</p>
+<p>mv /examples/codeigniter4example/ /var/www/html/</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>visit <a href="http://localhost/codeigniter4example/public">http://localhost/codeigniter4example/public</a></p>
+<p>HOW TO CREATE NEW Codeigniter4</p>
+<p>docker run -it -p 80:80 —name ci4container nicolascir/nicodevdocker:v12</p>
+<p>cd var/www/html</p>
+<p>composer create-project codeigniter4/appstarter ci4project</p>
+<p>chmod -R 777 ci4project</p>
+<p>cd ci4project</p>
+<p>rename env to .env</p>
+<p>edit inside .env : CI_ENVIRONMENT = development</p>
+<p>edit inside .env database parameters localhost admin//adminadmin</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>visit <a href="http://localhost/ci4project/public">http://localhost/ci4project/public</a></p>
+<p>HOW TO USE PRE-INSTALLED VUE JS</p>
+<p>docker run -it -p 8080:8080 -p 80:80 —name vueexamplecontainer nicolascir/nicodevdocker:v12</p>
+<p>cd project</p>
+<p>cd vueexample</p>
+<p>yarn serve</p>
+<p>visit localhost:8080</p>
+<p>HOW TO CREATE NEW VUE JS</p>
+<p>docker run -it -p 8080:8080 -p 80:80 —name vuecontainer nicolascir/nicodevdocker:v12</p>
+<p>cd project</p>
+<p>vue create myvue</p>
+<p>cd myvue</p>
+<p>yarn serve</p>
+<p>visit localhost:8080</p>
+<p>HOW TO USE PRE-INSTALLED REACT</p>
+<p>docker run -it -p 3000:3000 -p 80:80 —name reactexamplecontainer nicolascir/nicodevdocker:v12</p>
+<p>cd examples/reactexample</p>
+<p>yarn start</p>
+<p>visit localhost:3000</p>
+<p>HOW TO CREATE NEW REACT</p>
+<p>docker run -it -p 3000:3000 -p 80:80 —name reactcontainer nicolascir/nicodevdocker:v12</p>
+<p>cd project</p>
+<p>npx create-react-app reactproject</p>
+<p>cd reactproject</p>
+<p>yarn start</p>
+<p>visit localhost:3000</p>
+<p>HOW TO USE PRE-INSTALLED ANGULAR</p>
+<p>docker run -it -p 4200:4200 -p 80:80 —name angularexamplecontainer nicolascir/nicodevdocker:v12</p>
+<p>cd examples/angularexample</p>
+<p>ng serve —host 0.0.0.0</p>
+<p>visit localhost:4200</p>
+<p>HOW TO CREATE NEW ANGULAR</p>
+<p>docker run -it -p 4200:4200 -p 80:80 —name angularcontainer nicolascir/nicodevdocker:v12</p>
+<p>cd project</p>
+<p>ng new angularproject</p>
+<p>cd angularproject</p>
+<p>ng serve —host 0.0.0.0</p>
+<p>visit localhost:4200</p>
+<p>HOW TO USE PRE-INSTALLED STRAPI</p>
+<p>docker run -it -p 1337:1337 -p 80:80 —name strapiexamplecontainer nicolascir/nicodevdocker:v12</p>
+<p>cd examples/strapiexample</p>
+<p>yarn develop</p>
+<p>visit <a href="http://localhost:1337/admin">http://localhost:1337/admin</a></p>
+<p>HOW TO CREATE NEW STRAPI</p>
+<p>docker run -it -p 1337:1337 -p 80:80 —name strapicontainer nicolascir/nicodevdocker:v12</p>
+<p>cd project</p>
+<p>npx create-strapi-app my-project —quickstart</p>
+<p>visit <a href="http://localhost:1337/admin">http://localhost:1337/admin</a></p>
+<p>HOW TO USE PRE-INSTALLED LARAVEL</p>
+<p>docker run -it -p 80:80 —name laravelcontainer nicolascir/nicodevdocker:v12</p>
+<p>cd examples</p>
+<p>mv laravelexample/ /var/www/html/</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>visit localhost/laravelexample/public</p>
+<p>HOW TO CREATE NEW LARAVEL</p>
+<p>docker run -it -p 80:80 —name laravelcontainer nicolascir/nicodevdocker:v12</p>
+<p>cd /var/www/html</p>
+<p>composer create-project laravel/laravel laravelproject</p>
+<p>chmod 777 -R laravelproject</p>
+<p>cd laravelproject</p>
+<p>service apache2 start &#x26;&#x26; service mysql start</p>
+<p>visit localhost/laravelproject/public</p>
+<p>WORDPRESS NOT COMPATIBLE ! instead use this very good docker compose <a href="https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42">https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42</a></p>
+<p>note : to upload your own container on docker.io , you need a free account (windows : you need to be logged in docker GUI) , in docker website create a repository.</p>
+<p>run existing image, which become a container, add anything inside this container, then</p>
+<p>docker commit containername imagename</p>
+<p>docker tag imagename yourusername/reponame:versionname</p>
+<p>docker push yourusername/reponame:versionname</p>
+<p>//example I used</p>
+<p>docker commit nicotrainv4 nicodevdockerv5</p>
+<p>docker tag nicodevdockerv5 nicolascir/nicodevdocker:v5</p>
+<p>docker push nicolascir/nicodevdocker:v5</p>
+					</div>
+				</div>
+			</main>
+		</div>
+		<aside class="astro-RCDZUQ3A">
+	<h2 class="astro-RCDZUQ3A">Et si nous travaillions ensemble ?</h2>
+	<a href="mailto:nicolascirion@hotmail.com" class="astro-BALV45LP">
+		Message à NicolasCirion@hotmail.com
+		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" style="--size:1.2em" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M210.3 35.9 23.9 88.4a8 8 0 0 0-1.2 15l85.6 40.5a7.8 7.8 0 0 1 3.8 3.8l40.5 85.6a8 8 0 0 0 15-1.2l52.5-186.4a7.9 7.9 0 0 0-9.8-9.8Zm-99.4 109.2 45.2-45.2"/></g>
+	
+</svg></a>
+</aside>
+	</div>
+			<footer class="astro-SZ7XMLTE">
+	<div class="group astro-SZ7XMLTE">
+		<p class="astro-SZ7XMLTE">
+			 <a href="https://astro.build/" class="astro-SZ7XMLTE">Astro Framework</a>
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" style="--size:1.2em" class="astro-PATNJMLL">
+	<g class="astro-PATNJMLL"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M94.1 184.6c-11.4 33.9-56.6 33.9-56.6 33.9s0-45.2 33.9-56.6m124.5-56.5L128 173.3 82.7 128l67.9-67.9C176.3 34.4 202 34.7 213 36.3a7.8 7.8 0 0 1 6.7 6.7c1.6 11 1.9 36.7-23.8 62.4Z"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M184.6 116.7v64.6a8 8 0 0 1-2.4 5.6l-32.3 32.4a8 8 0 0 1-13.5-4.1l-8.4-41.9m11.3-101.9H74.7a8 8 0 0 0-5.6 2.4l-32.4 32.3a8 8 0 0 0 4.1 13.5l41.9 8.4"/></g>
+	
+</svg>
+		</p>
+		<p class="astro-SZ7XMLTE">&copy; 2023 Nicolas Cirion</p>
+	</div>
+	<p class="socials astro-SZ7XMLTE">
+		<a href="https://fr.linkedin.com/in/nicolas-cirion-bab9131bb" class="astro-SZ7XMLTE"> Linkedin</a>
+		<a href="https://github.com/nicolascir" class="astro-SZ7XMLTE"> GitHub</a>
+		<a href="https://hub.docker.com/u/nicolascir" class="astro-SZ7XMLTE"> Docker</a>
+	</p>
+</footer>
+		</div>
+
+		
+
+		
+	</body>
+</html>
