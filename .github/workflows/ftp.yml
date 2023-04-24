@@ -37,4 +37,4 @@ jobs:
           server: nicolasproject.hd.free.fr
           username: nicolascir
           password: ${{ secrets.ftp_password }}
-          server-dir: ./siteweb/public/
+          server-dir: ./siteweb/public/test
