@@ -8,6 +8,8 @@ jobs:
     name: build et ftp
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout repository
+        uses: actions/checkout@main
       - name: Install dependencies
         run: npm ci
       - name: Build dependencies
