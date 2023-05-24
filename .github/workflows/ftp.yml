@@ -18,7 +18,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
           server: nicolasproject.hd.free.fr
-          username: nicolascir
+          username: ${{ secrets.ftp_login }}
           password: ${{ secrets.ftp_password }}
           local-dir: ./dist/
-          server-dir: ./siteweb/public/
+          server-dir: ./CoinWebsite/
